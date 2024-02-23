@@ -37,7 +37,7 @@ pipeline {
                 """
                 withCredentials([gitUsernamePassword(credentialsId: 'github-token', gitToolName: 'Default')]) {
                   sh "git push https://github.com/sudarshansw7/gitOps-registration-app master"
-                }
+                 }
             }
         }
       
