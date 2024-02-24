@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: register-app
-          image: sudarshansw7/registration-app-ci:1.0.0-9
+          image: sudarshansw7/registration-app:1.0.0-9
           resources:
             limits:
               memory: "256Mi"
