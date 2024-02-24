@@ -2,8 +2,7 @@ pipeline {
     agent { label "Jenkins-Agent" }
     environment {
               APP_NAME = "registration-app-cd"
-               GITHUB_USERNAME = credentials('sudarshansw7')
-               GITHUB_TOKEN = credentials('github-token')
+              GITHUB_TOKEN = credentials('github-token')
     }
 
     stages {
