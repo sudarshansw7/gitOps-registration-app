@@ -2,6 +2,8 @@ pipeline {
     agent { label "Jenkins-Agent" }
     environment {
               APP_NAME = "registration-app-cd"
+               GITHUB_USERNAME = credentials('sudarshansw7')
+               GITHUB_TOKEN = credentials('github-token')
     }
 
     stages {
@@ -13,7 +15,7 @@ pipeline {
 
         stage("Checkout from SCM") {
                steps {
-                   git branch: 'master', credentialsId: 'github', url: 'https://github.com/sudarshansw7/gitOps-registration-app'
+                   git branch: 'master', credentialsId: 'github-token', url: 'https://github.com/sudarshansw7/gitOps-registration-app'
                }
         }
 
